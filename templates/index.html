@@ -1,0 +1,26 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+
+<h2 align="center">แสดงข้อมูลบทความ</h2>
+<div class="container">
+<table class="table">
+    <thead class="table-dark">
+     <tr>
+        <th scope="col">รหัสบทความ</th>
+        <th scope="col">บทความ</th>
+        <th scope="col">รายละเอียดบทความ</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for post in posts %}
+     <tr>
+        <th scope="row">{{post.id}}</th>
+        <td>{{post.name}}</td>
+        <td>{{post.desc}}</td>
+     </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}
